@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07141c"/>
+      <stop offset=".55" stop-color="#102e35"/>
+      <stop offset=".84" stop-color="#8a4836"/>
+      <stop offset="1" stop-color="#d47749"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".34" r=".55">
+      <stop offset="0" stop-color="#ffd9a0" stop-opacity=".95"/>
+      <stop offset=".3" stop-color="#ef9b55" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ef9b55" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx=".5" cy=".4" r=".8">
+      <stop offset=".45" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#020709" stop-opacity=".62"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1140" cy="300" r="260" fill="url(#glow)" filter="url(#blur)"/>
+  <circle cx="1140" cy="300" r="112" fill="#f7cf96" opacity=".82"/>
+  <g fill="none" stroke="#f4e9d2" stroke-opacity=".1">
+    <path d="M-80 520 C 200 470 380 610 650 540 S 1150 480 1680 580"/>
+    <path d="M-80 560 C 230 505 400 650 680 575 S 1180 520 1680 620"/>
+    <path d="M-80 600 C 260 540 430 690 710 610 S 1210 560 1680 660"/>
+    <path d="M-80 640 C 290 575 460 730 740 645 S 1240 600 1680 700"/>
+    <path d="M-80 680 C 320 610 490 770 770 680 S 1270 640 1680 740"/>
+    <path d="M-80 720 C 350 645 520 810 800 715 S 1300 680 1680 780"/>
+  </g>
+  <g fill="#f6d9b0" opacity=".8">
+    <circle cx="420" cy="430" r="3"/><circle cx="560" cy="330" r="2"/><circle cx="690" cy="470" r="3"/>
+    <circle cx="820" cy="280" r="2"/><circle cx="940" cy="400" r="3"/><circle cx="1040" cy="240" r="2"/>
+    <circle cx="1240" cy="450" r="2"/><circle cx="1320" cy="330" r="3"/><circle cx="1440" cy="500" r="2"/>
+  </g>
+  <g fill="none" stroke="#f4e9d2" stroke-opacity=".1">
+    <path d="M420 430 Q 600 250 820 280 T 1240 450"/>
+    <path d="M560 330 Q 760 180 1040 240 T 1440 500"/>
+    <path d="M690 470 Q 820 340 940 400 T 1320 330"/>
+  </g>
+  <path d="M0 690 C 260 640 440 760 700 690 S 1200 650 1600 720 L1600 900 L0 900Z" fill="#061017" opacity=".58"/>
+  <rect width="1600" height="900" fill="url(#vig)"/>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "lastSuccess": "2026-10-29T10:31:10.683Z",
+  "lastAttempt": "2026-10-29T10:31:42.408Z",
+  "lastDate": "2026-10-29",
+  "lastError": null,
+  "lastStats": {
+    "feedsConfigured": 49,
+    "feedsOk": 42,
+    "articlesFetched": 1187,
+    "articlesUsed": 793,
+    "stories": 32,
+    "verified": 13,
+    "independentSources": 22,
+    "countries": 10,
+    "categories": 6,
+    "sources": 42
+  },
+  "proxy": {
+    "enabled": true,
+    "source": "environment"
+  }
+}

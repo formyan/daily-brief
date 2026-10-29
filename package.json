@@ -1,0 +1,20 @@
+{
+  "name": "daily-brief",
+  "version": "1.3.1",
+  "private": true,
+  "type": "module",
+  "description": "晨间简报 — 多信源交叉核验的每日国际简报",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "refresh": "node scripts/refresh.mjs",
+    "summarize": "node scripts/summarize.mjs",
+    "images": "node scripts/enrich-images.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node test/analyze.test.mjs && node test/summarize.test.mjs",
+    "icons": "python scripts/make-icons.py"
+  }
+}

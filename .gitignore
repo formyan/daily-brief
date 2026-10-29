@@ -1,0 +1,11 @@
+node_modules/
+.env
+data/cache/
+data/logs/
+data/pipeline.lock
+data/*.tmp
+.tmp-*
+docs/cover-raw.png
+.DS_Store
+Thumbs.db
+*.log

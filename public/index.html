@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>晨间简报 · The Daily Brief</title>
+  <meta name="description" content="每天 18:30 更新。从国际权威信源中筛选、聚类并交叉核验科技、经济、外交与政治要闻。">
+  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0f0f" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="晨间简报">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/icon-180.png">
+  <link rel="stylesheet" href="/styles.css?v=1.3.1">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('dailybrief.theme');
+        const system = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved === 'dark' || saved === 'light' ? saved : system;
+      } catch (_) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳到正文</a>
+  <div class="page-progress" aria-hidden="true"><span id="pageProgress"></span></div>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.2 16.2 4.3 4.3"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.4 14.6A8.5 8.5 0 0 1 9.4 3.6a8.5 8.5 0 1 0 11 11Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.7 4.7l1.4 1.4M17.9 17.9l1.4 1.4M2.5 12h2M19.5 12h2M4.7 19.3l1.4-1.4M17.9 6.1l1.4-1.4"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6.5 3.8h11a1 1 0 0 1 1 1v16l-6.5-4.3L5.5 20.8v-16a1 1 0 0 1 1-1Z"/></symbol>
+    <symbol id="i-arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 6.1M20 5v6h-6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v11M7.5 10.5 12 15l4.5-4.5M4 20h16"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.8 9h16.4M3.8 15h16.4M12 3.5c2.3 2.3 3.4 5.2 3.4 8.5S14.3 18.2 12 20.5C9.7 18.2 8.6 15.3 8.6 12S9.7 5.8 12 3.5Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5.3l3.4 2"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m14.5 5-7 7 7 7"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9.5 5 7 7-7 7"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4M8.2 13.2l7.6 4"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 8.5 4.7L12 12.5 3.5 7.7 12 3Z"/><path d="m3.5 12 8.5 4.7L20.5 12M3.5 16.3l8.5 4.7 8.5-4.7"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5h6.5A2.5 2.5 0 0 1 13 7v13a2.5 2.5 0 0 0-2.5-2.5H4v-13ZM20 4.5h-6.5A2.5 2.5 0 0 0 11 7v13a2.5 2.5 0 0 1 2.5-2.5H20v-13Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3.5 5.5h17l-6.5 7.5v6l-4 2v-8L3.5 5.5Z"/></symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <div class="masthead">
+      <div class="mast-left">
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="leftRail">
+          <svg><use href="#i-menu"/></svg>
+        </button>
+        <a class="brand" href="/" aria-label="晨间简报首页">
+          <span class="brand-cn">晨间简报</span>
+          <span class="brand-en">The Daily Brief</span>
+        </a>
+      </div>
+      <div class="mast-center" aria-live="polite">
+        <span id="mastDate">正在载入日期</span>
+        <span class="mast-sep">/</span>
+        <span id="mastIssue">第 001 期</span>
+      </div>
+      <div class="mast-actions">
+        <button class="icon-btn" id="searchBtn" type="button" aria-label="搜索本期内容">
+          <svg><use href="#i-search"/></svg>
+          <span class="icon-label">搜索</span>
+        </button>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="切换深色模式" aria-pressed="false">
+          <svg class="theme-icon-moon"><use href="#i-moon"/></svg>
+          <svg class="theme-icon-sun"><use href="#i-sun"/></svg>
+        </button>
+        <button class="icon-btn install-btn" id="installBtn" type="button" aria-label="安装到设备" hidden>
+          <svg><use href="#i-download"/></svg>
+          <span class="icon-label">安装</span>
+        </button>
+        <button class="icon-btn refresh-btn" id="refreshBtn" type="button" aria-label="立即更新本期">
+          <svg><use href="#i-refresh"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="section-nav" id="sectionNav" aria-label="栏目导航">
+      <a href="#section-tech" data-nav="tech">科技</a>
+      <a href="#section-economy" data-nav="economy">经济</a>
+      <a href="#section-diplomacy" data-nav="diplomacy">外交</a>
+      <a href="#section-politics" data-nav="politics">政治</a>
+      <a href="#section-science" data-nav="science">科学</a>
+      <a href="#section-world" data-nav="world">国际</a>
+      <span class="nav-spacer"></span>
+      <button class="nav-text-btn" id="methodBtnTop" type="button">方法与信源</button>
+      <button class="nav-text-btn" id="savedBtnTop" type="button">收藏 <span id="savedCountTop">0</span></button>
+    </nav>
+  </header>
+
+  <div class="status-strip" id="statusStrip" aria-live="polite">
+    <div class="status-inner">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span id="statusText">正在连接信源…</span>
+      <span class="status-divider" aria-hidden="true"></span>
+      <span id="countdownText">下次更新 18:30</span>
+      <span class="status-spacer"></span>
+      <button class="status-link" id="statusRefresh" type="button">立即更新</button>
+    </div>
+  </div>
+
+  <div class="offline-banner" id="offlineBanner" hidden>
+    <svg><use href="#i-info"/></svg>
+    <span>当前离线，正在显示最近一次缓存的简报。</span>
+  </div>
+
+  <div class="layout">
+    <aside class="rail rail-left" id="leftRail" aria-label="日期、栏目与收藏">
+      <section class="date-card">
+        <div class="date-top">
+          <span id="dateMonth">十月</span>
+          <span id="dateYear">2026</span>
+        </div>
+        <div class="date-day" id="dateDay">25</div>
+        <div class="date-bottom">
+          <span id="dateWeekday">星期日</span>
+          <span id="dateIssue">第 001 期</span>
+        </div>
+        <div class="date-nav">
+          <button class="date-arrow" id="prevDate" type="button" aria-label="上一期">
+            <svg><use href="#i-chevron-left"/></svg>
+          </button>
+          <button class="date-today" id="todayBtn" type="button">回到最新</button>
+          <button class="date-arrow" id="nextDate" type="button" aria-label="下一期">
+            <svg><use href="#i-chevron-right"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <nav class="rail-block" aria-label="本期栏目">
+        <div class="rail-heading">本期栏目 <span>Index</span></div>
+        <ul class="rail-nav" id="railNav">
+          <li><a href="#top" data-nav="top"><span>封面</span><em>00</em></a></li>
+          <li><a href="#section-tech" data-nav="tech"><span>科技</span><em>01</em></a></li>
+          <li><a href="#section-economy" data-nav="economy"><span>经济</span><em>02</em></a></li>
+          <li><a href="#section-diplomacy" data-nav="diplomacy"><span>外交</span><em>03</em></a></li>
+          <li><a href="#section-politics" data-nav="politics"><span>政治</span><em>04</em></a></li>
+          <li><a href="#section-science" data-nav="science"><span>科学</span><em>05</em></a></li>
+          <li><a href="#section-world" data-nav="world"><span>国际</span><em>06</em></a></li>
+        </ul>
+      </nav>
+
+      <section class="rail-block">
+        <div class="rail-heading">往期 <span>Archive</span></div>
+        <label class="select-wrap">
+          <span class="sr-only">选择往期日期</span>
+          <select id="archiveSelect"></select>
+          <svg><use href="#i-chevron-down"/></svg>
+        </label>
+        <button class="rail-action" id="savedBtn" type="button">
+          <svg><use href="#i-bookmark"/></svg>
+          <span>我的收藏</span>
+          <em id="savedCount">0</em>
+        </button>
+        <button class="rail-action" id="methodBtn" type="button">
+          <svg><use href="#i-layers"/></svg>
+          <span>核验方法与信源</span>
+          <svg class="rail-action-arrow"><use href="#i-arrow-ne"/></svg>
+        </button>
+      </section>
+
+      <section class="rail-block install-card" id="installCard">
+        <div class="install-mark"><svg><use href="#i-download"/></svg></div>
+        <div>
+          <strong>装到桌面或手机</strong>
+          <p>Windows 用 Edge，安卓用 Chrome，添加后像原生应用一样打开。</p>
+          <button class="text-link" id="installBtnRail" type="button">查看安装方法</button>
+        </div>
+      </section>
+
+      <div class="rail-foot">
+        <span>独立筛选 · 透明标注</span>
+        <span>v1.3</span>
+      </div>
+    </aside>
+
+    <main class="content" id="content">
+      <div id="editionView" hidden></div>
+
+      <div class="loading-state" id="loadingState" aria-live="polite">
+        <div class="skeleton skeleton-hero"></div>
+        <div class="skeleton-row">
+          <div class="skeleton skeleton-line w-40"></div>
+          <div class="skeleton skeleton-line w-70"></div>
+          <div class="skeleton skeleton-line w-55"></div>
+        </div>
+        <div class="loading-caption" id="loadingCaption">正在打开今日简报…</div>
+      </div>
+
+      <section class="empty-state" id="emptyState" hidden>
+        <div class="empty-kicker">THE FIRST EDITION</div>
+        <h1>今天的简报还在路上。</h1>
+        <p id="emptyText">服务正在抓取信源、聚类事件并做交叉核验。首期通常需要 1–3 分钟。</p>
+        <div class="empty-actions">
+          <button class="btn btn-primary" id="emptyRefresh" type="button">立即生成</button>
+          <button class="btn btn-ghost" id="emptyMethod" type="button">先看方法</button>
+        </div>
+        <div class="empty-status" id="emptyStatus"></div>
+      </section>
+    </main>
+
+    <aside class="rail rail-right" aria-label="数据与方法">
+      <section class="pulse-card" id="pulseCard">
+        <div class="pulse-head">
+          <span>今日数字</span>
+          <span class="pulse-date" id="pulseDate">—</span>
+        </div>
+        <div class="pulse-grid">
+          <div><strong id="statSources">—</strong><span>可用信源</span></div>
+          <div><strong id="statArticles">—</strong><span>筛选报道</span></div>
+          <div><strong id="statStories">—</strong><span>事件线索</span></div>
+          <div><strong id="statVerified">—</strong><span>交叉印证</span></div>
+        </div>
+        <p class="pulse-note" id="pulseNote">正在统计…</p>
+      </section>
+
+      <section class="rail-block verified-card">
+        <div class="rail-heading">最值得对照 <span>Cross-checked</span></div>
+        <ol class="compact-list" id="verifiedList">
+          <li class="muted-line">载入中…</li>
+        </ol>
+        <button class="text-link" id="openMethodFromRail" type="button">交叉印证如何计算 <svg><use href="#i-arrow-ne"/></svg></button>
+      </section>
+
+      <section class="rail-block">
+        <div class="rail-heading">信源构成 <span>Source mix</span></div>
+        <div class="mix-bars" id="mixBars"></div>
+        <p class="tiny-note" id="mixNote"></p>
+      </section>
+
+      <section class="method-mini">
+        <div class="method-mini-top">
+          <svg><use href="#i-layers"/></svg>
+          <span>三层核验</span>
+        </div>
+        <ol>
+          <li><b>01</b> 同一事件归并，而不是同一标题归并。</li>
+          <li><b>02</b> 只有不同 newsroom 才计入独立信源。</li>
+          <li><b>03</b> 官方与国家媒体单独标注，不混算。</li>
+        </ol>
+        <button class="text-link" id="methodBtnRail" type="button">阅读完整方法</button>
+      </section>
+
+      <div class="right-foot">
+        <span>更新时间 <b id="updateTimeLabel">18:30</b></span>
+        <span id="lastUpdated">—</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="brand-cn">晨间简报</span>
+        <span class="brand-en">The Daily Brief</span>
+      </div>
+      <p>把一天的国际新闻压缩成可对照的线索。标题与摘要版权归原信源所有；本站不替代原始报道，也不替任何一方下事实结论。</p>
+    </div>
+    <div class="footer-meta">
+      <button class="footer-link" id="methodBtnFooter" type="button">方法与信源</button>
+      <button class="footer-link" id="sourcesBtnFooter" type="button">全部信源</button>
+      <button class="footer-link" id="installBtnFooter" type="button">安装应用</button>
+      <span>Daily Brief · <span id="footerYear">2026</span></span>
+    </div>
+  </footer>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+    <a href="#top" data-nav="top" class="is-active">
+      <svg><use href="#i-book"/></svg><span>今日</span>
+    </a>
+    <a href="#section-tech" data-nav="tech">
+      <svg><use href="#i-layers"/></svg><span>科技</span>
+    </a>
+    <a href="#section-economy" data-nav="economy">
+      <svg><use href="#i-globe"/></svg><span>经济</span>
+    </a>
+    <button id="mobileSearch" type="button">
+      <svg><use href="#i-search"/></svg><span>搜索</span>
+    </button>
+    <button id="mobileMore" type="button">
+      <svg><use href="#i-menu"/></svg><span>更多</span>
+    </button>
+  </nav>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+
+  <div class="modal" id="storyModal" role="dialog" aria-modal="true" aria-labelledby="storyTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel story-panel" role="document">
+      <button class="modal-close" type="button" data-close-modal aria-label="关闭">
+        <svg><use href="#i-close"/></svg>
+      </button>
+      <div class="story-modal-body" id="storyModalBody"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchTitle" hidden>
+    <div class="modal-backdrop" data-close-search></div>
+    <div class="modal-panel search-panel" role="document">
+      <div class="search-head">
+        <svg class="search-icon"><use href="#i-search"/></svg>
+        <input id="searchInput" type="search" autocomplete="off" spellcheck="false" placeholder="搜索标题、实体、栏目…" aria-label="搜索本期内容">
+        <button class="modal-close inline" type="button" data-close-search aria-label="关闭搜索">
+          <svg><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <div class="search-filters" id="searchFilters"></div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-foot">
+        <span><kbd>Esc</kbd> 关闭</span>
+        <span><kbd>Enter</kbd> 打开第一条</span>
+        <span id="searchCount"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle" hidden>
+    <div class="modal-backdrop" data-close-info></div>
+    <div class="modal-panel info-panel" role="document">
+      <button class="modal-close" type="button" data-close-info aria-label="关闭">
+        <svg><use href="#i-close"/></svg>
+      </button>
+      <div class="info-body" id="infoBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">需要启用 JavaScript 才能读取每日简报。服务端数据接口仍在 <code>/api/editions/latest</code>。</div>
+  </noscript>
+
+  <script src="/app.js?v=1.3.1" defer></script>
+</body>
+</html>
